@@ -1,16 +1,21 @@
 <template>
-  <div id="app">
+  <div id="app" class="container mt-3">
+    <!-- Units Title -->
+    <h1 class="mb-4">Units</h1>
+    
+    <!-- Filter Row -->
+    <FilterSection />
+    
+    <!-- Tag Details Card -->
     <TagDetails />
   </div>
 </template>
 
 <script>
-import TagDetails from './components/TagDetails.vue'
+import FilterSection from '@/modules/components/FilterSection.vue'
+import TagDetails from '@/modules/components/TagDetails.vue'
 
 export default {
-  name: 'App',
-  components: {
-    TagDetails
-  }
+  components: { FilterSection, TagDetails }
 }
 </script>
