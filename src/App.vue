@@ -1,21 +1,12 @@
+<script setup>
+import UnitsView from '@/modules/units/views/UnitsView.vue';
+
+import AppHeader from './components/AppHeader.vue';
+</script>
+
 <template>
   <div id="app" class="container mt-3">
-    <!-- Units Title -->
-    <h1 class="mb-4">Units</h1>
-    
-    <!-- Filter Row -->
-    <FilterSection />
-    
-    <!-- Tag Details Card -->
-    <TagDetails />
+    <!-- <AppHeader /> -->
+    <UnitsView />
   </div>
 </template>
-
-<script>
-import FilterSection from '@/modules/components/FilterSection.vue'
-import TagDetails from '@/modules/components/TagDetails.vue'
-
-export default {
-  components: { FilterSection, TagDetails }
-}
-</script>
