@@ -4,7 +4,6 @@ import TagDetails from '../components/TagDetails.vue';
 
 </script>
 <template>
-    <AppHeader />
       <!-- Units Title -->
       <h1 class="mb-4">Units</h1>
     
