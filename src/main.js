@@ -10,3 +10,4 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 const app = createApp(App)
 
 app.mount('#app')
+
