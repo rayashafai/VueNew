@@ -1,7 +1,7 @@
 <template>
   <div class="units-table-container">
     <div class="table-responsive">
-      <table class="table table-hover align-middle">
+      <table class="table table-hover align-middle w-100">
         <thead class="table-header">
           <tr>
             <th width="5%">#</th>
@@ -34,7 +34,6 @@
             <td class="last-update">{{ unit.lastUpdate }}</td>
             <td>
               <span :class="['status-badge', statusClass(unit.status)]">
-                <i :class="statusIcon(unit.status)" class="me-1"></i>
                 {{ unit.status }}
               </span>
             </td>
@@ -48,7 +47,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i class="bi bi-three-dots-vertical"></i>
+                  <i class="bi bi-three-dots"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
@@ -140,29 +139,26 @@ const statusClass = (status) => {
     'صيانة': 'status-maintenance'
   }[status] || '';
 };
-
-const statusIcon = (status) => {
-  return {
-    'تشغيل': 'bi-check-circle-fill',
-    'عدم تشغيل': 'bi-x-circle-fill',
-    'صيانة': 'bi-tools'
-  }[status] || 'bi-question-circle';
-};
 </script>
 
 <style scoped>
 .units-table-container {
   direction: rtl;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .table-responsive {
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .table {
+  width: 100%;
   --bs-table-color: #637483;
   --bs-table-hover-color: #637483;
   margin-bottom: 0;
@@ -201,12 +197,13 @@ const statusIcon = (status) => {
 }
 
 .status-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  border-radius: 4px;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .status-active {
@@ -229,10 +226,21 @@ const statusIcon = (status) => {
   border: 1px solid #dee2e6;
   background-color: white;
   color: #637483;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-action:hover {
   background-color: #f8f9fa;
+}
+
+.btn-action.dropdown-toggle::after {
+  display: none;
+}
+
+.bi-three-dots {
+  font-size: 1.2rem;
 }
 
 .dropdown-menu {
