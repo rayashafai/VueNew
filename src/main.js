@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 
 // Bootstrap Configuration
@@ -8,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 // Create Vue App
 const app = createApp(App)
+const pinia = createPinia()
 
+app.use(pinia)
 app.mount('#app')
-

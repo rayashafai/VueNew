@@ -3,7 +3,7 @@
     <!-- Main Header -->
     <header class="header">
       <!-- Units Text -->
-      <div class="units-text">Units</div>
+      <div class="units-text">Users</div>
 
       <!-- Header Right Section -->
       <div class="header-right">

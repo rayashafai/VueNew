@@ -1,12 +1,9 @@
 <script setup>
-import UnitsView from '@/modules/units/views/UnitsView.vue';
-
-import AppHeader from './components/AppHeader.vue';
+import UsersView from '@/modules/users/views/UsersView.vue'
 </script>
 
 <template>
   <div id="app" class="container mt-3">
-    <!-- <AppHeader /> -->
-    <UnitsView />
+    <UsersView />
   </div>
 </template>
